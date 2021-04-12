@@ -22,8 +22,10 @@ class Timer(object):
         从京东服务器获取时间毫秒
         :return:
         """
+        print(">>>>>开始")
         url = 'https://a.jd.com//ajax/queryServerData.html'
         ret = requests.get(url).text
+        print('sdfsdfsdf='+ret)
         js = json.loads(ret)
         return int(js["serverTime"])
 
